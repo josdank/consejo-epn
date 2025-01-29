@@ -3,7 +3,7 @@ import 'font-awesome/css/font-awesome.min.css'; // Importa los estilos de Font A
 
 function Footer() {
   return (
-    <footer style={{ color: "white", padding: "20px", textAlign: "center", background: "none", border: "none", position: "relative", width: "100%" }}>
+    <footer style={{ color: "white", padding: "0px", textAlign: "center", background: "none", border: "none", position: "relative", width: "100%" }}>
       <div className="social-links">
         <a href="https://www.facebook.com/profile.php?id=61571942466758" target="_blank" rel="noopener noreferrer" className="social-link">
           <i className="fa fa-facebook" style={{ fontSize: "30px", color: "white" }}></i>

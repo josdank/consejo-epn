@@ -41,15 +41,15 @@ function Values() {
   }, []);
 
   return (
-    <div style={{ padding: "5px", display: "flex" }}>
-      <div style={{ width: "300px", marginRight: "20px" }}>
-        <h2>Valores Delta EPN</h2>
+    <div style={{ display: "flex", height: "69vh", flexDirection: "row" }}>
+      <div style={{ width: "300px", backgroundColor: "#f1f1f1", padding: "20px", boxShadow: "2px 0 5px rgba(0,0,0,0.1)", overflowY: "auto" }}>
+        <h2 className="valor" style={{ marginBottom: "20px" }}>Valores Delta EPN</h2> {/* Espacio agregado */}
         <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
           {valuesList.map((value, index) => (
             <div 
               key={index}
               style={{
-                backgroundColor: "#f1f1f1",
+                backgroundColor: showIndex === index ? "#d3e2f1" : "#fff",
                 padding: "20px",
                 borderRadius: "8px",
                 boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
@@ -76,22 +76,33 @@ function Values() {
         boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
         display: "flex",
         flexDirection: "column",
-        alignItems: "center"
+        alignItems: "center",
+        justifyContent: "center",
+        overflowY: "auto"
       }}>
         <h3>{valuesList[showIndex].title}</h3>
-        <p style={{ textAlign: 'center' }}>{valuesList[showIndex].detail}</p>
-        <img
-          src={valuesList[showIndex].image}
-          alt={valuesList[showIndex].title}
-          style={{
-            maxWidth: "100%",
-            maxHeight: "300px", // Ajuste de tamaño máximo
-            height: "auto",
-            borderRadius: "8px",
-            marginTop: "20px",
-            boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)"
-          }}
-        />
+        <p style={{ textAlign: 'center', marginBottom: "10px", font: "bold" }}>{valuesList[showIndex].detail}</p> {/* Reducido espacio entre texto e imagen */}
+        <div style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          width: "100%",
+          height: "300px",
+          maxWidth: "600px",
+          marginTop: "10px" // Reducido espacio en la parte superior de la imagen
+        }}>
+          <img
+            src={valuesList[showIndex].image}
+            alt={valuesList[showIndex].title}
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover", // Asegura que las imágenes mantengan el mismo tamaño
+              borderRadius: "8px",
+              boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)"
+            }}
+          />
+        </div>
       </div>
     </div>
   );

@@ -8,7 +8,7 @@ function Contact() {
     {
       title: "1er Principal y su Alterno",
       principalImage: "/Principal1.jpg", // Ruta de la imagen del primer principal
-      alternoImage: "/Alterno1.jpg" // Ruta de la imagen del primer alterno
+      alternoImage: "/Alterno1.png" // Ruta de la imagen del primer alterno
     },
     {
       title: "2do Principal y su Alterno",
@@ -28,8 +28,8 @@ function Contact() {
 
   return (
     <div style={{ padding: "20px", textAlign: "center" }}>
-      <h2>Delta EPN</h2>
-      <p>Con un absoluto sentido de responsabilidad, Delta EPN se presenta como una opción de representación estudiantil...</p>
+      <h2 className='delta'>Delta EPN</h2>
+      <p className='cont'>Con un absoluto sentido de responsabilidad, Delta EPN se presenta como una opción de representación estudiantil...</p>
       <div style={{ display: "flex", justifyContent: "center", gap: "20px", marginTop: "20px" }}>
         {teamMembers.map((member, index) => (
           <div key={index} style={{ textAlign: "center" }}>

@@ -74,7 +74,7 @@ function PlanTrabajo() {
       <h2 style={{ marginBottom: '40px', textAlign: 'center' }}>Conoce nuestras Propuestas</h2>
       <div>
         {rows.map((row, rowIndex) => (
-          <div key={rowIndex} style={{ display: 'flex', justifyContent: 'center', gap: '20px', marginBottom: '20px' }}>
+          <div key={rowIndex} style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '20px', marginBottom: '20px' }}>
             {row.map((item, index) => (
               <div
                 key={index}
@@ -88,7 +88,14 @@ function PlanTrabajo() {
                   boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
                   cursor: 'pointer',
                   transition: 'background-color 0.3s ease',
-                  textAlign: 'center'
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  textAlign: 'center',
+                  height: 'auto',
+                  minHeight: '150px',
+                  color: '#000000'  // Color de texto negro
                 }}
               >
                 <h3 style={{ color: '#085979' }}>{item.title}</h3>
