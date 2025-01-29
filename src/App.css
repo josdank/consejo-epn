@@ -30,10 +30,12 @@
   h2 {
     color: #ffffff; /* Color blanco suave para texto */
   }
+  
   .cont, .valor, .delta{
     color: #000000;
     font-weight: bold;
   }
+  
   .valor{
     color: rgb(0, 0, 0);
   }
@@ -63,7 +65,7 @@
   }
   
   /* Footer */
-footer {
+  footer {
     background-color: #2b2b2b; /* Un tono más oscuro para resaltar el footer */
     color: #ECEBEA;
     padding: 20px 0; /* Espacio interno mayor para una mejor apariencia */
@@ -103,7 +105,6 @@ footer {
     vertical-align: middle; /* Alinea verticalmente los íconos con el texto */
   }
   
-  
   /* Animación para el fondo difuso */
   @keyframes gradientAnimation {
     0% {
@@ -125,5 +126,49 @@ footer {
   
   a:hover {
     color: #F3505A;
+  }
+  
+  /* Media Queries para Responsividad */
+  @media (max-width: 768px) {
+    nav a {
+      font-size: 1rem; /* Disminuye el tamaño de la fuente para los enlaces del Navbar */
+    }
+  
+    footer a {
+      font-size: 1rem; /* Disminuye el tamaño de la fuente de los enlaces */
+    }
+  
+    footer p {
+      font-size: 0.9rem; /* Disminuye el tamaño de la fuente del texto adicional */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    nav {
+      flex-direction: column; /* Cambia la dirección del Navbar a columna */
+      padding: 10px 0; /* Reduce el padding del Navbar */
+    }
+  
+    nav a {
+      padding: 5px 10px; /* Reduce el padding de los enlaces del Navbar */
+      font-size: 0.9rem; /* Disminuye el tamaño de la fuente de los enlaces del Navbar */
+    }
+  
+    footer {
+      padding: 10px 0; /* Reduce el padding del footer */
+    }
+  
+    footer a {
+      font-size: 0.9rem; /* Disminuye el tamaño de la fuente de los enlaces */
+      margin: 0 10px; /* Reduce el margen entre los enlaces */
+    }
+  
+    footer p {
+      font-size: 0.8rem; /* Disminuye el tamaño de la fuente del texto adicional */
+    }
+  
+    footer i {
+      font-size: 1.2rem; /* Disminuye el tamaño de los íconos */
+    }
   }
   
