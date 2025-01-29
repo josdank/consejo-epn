@@ -1,0 +1,53 @@
+/* App.css */
+
+/* Estructura básica del footer */
+footer {
+    color: white;
+    padding: 20px;
+    text-align: center;
+    background: none;
+    border: none;
+    position: relative;
+    width: 100%;
+  }
+  
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .social-link {
+    color: white;
+    text-decoration: none;
+    font-size: 30px; /* Tamaño de los íconos */
+    transition: color 0.3s ease;
+  }
+  
+  .social-link:hover {
+    color: #F3505A; /* Cambio de color al pasar el mouse */
+  }
+  
+  /* Media Queries para hacer responsive */
+  @media (max-width: 768px) {
+    .social-links {
+      gap: 15px;
+    }
+  
+    .social-link {
+      font-size: 25px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .social-links {
+      gap: 10px;
+    }
+  
+    .social-link {
+      font-size: 20px;
+    }
+  }
+  
