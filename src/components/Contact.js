@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './Contact.css';
 
 function Contact() {
   // Inicializa el estado con 0 para que el primer candidato esté activo por defecto
@@ -27,49 +28,27 @@ function Contact() {
   };
 
   return (
-    <div style={{ padding: "20px", textAlign: "center" }}>
+    <div className="contact-container">
       <h2 className='delta'>Delta EPN</h2>
       <p className='cont'>Con un absoluto sentido de responsabilidad, Delta EPN se presenta como una opción de representación estudiantil...</p>
-      <div style={{ display: "flex", justifyContent: "center", gap: "20px", marginTop: "20px" }}>
+      <div className="cards-container">
         {teamMembers.map((member, index) => (
-          <div key={index} style={{ textAlign: "center" }}>
-            <div
-              onClick={() => handleCardClick(index)}
-              style={{
-                backgroundColor: "#085979",
-                color: "#ECEBEA",
-                padding: "10px 20px",
-                borderRadius: "8px",
-                cursor: "pointer",
-                boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)"
-              }}
-            >
-              <h3>{member.title}</h3>
-            </div>
+          <div key={index} className="card" onClick={() => handleCardClick(index)}>
+            <h3>{member.title}</h3>
           </div>
         ))}
       </div>
       {activeIndex !== null && (
-        <div style={{ display: "flex", justifyContent: "center", gap: "20px", marginTop: "20px" }}>
+        <div className="images-container">
           <img
             src={teamMembers[activeIndex].principalImage}
             alt={`${teamMembers[activeIndex].title} - Principal`}
-            style={{
-              maxWidth: "400px",
-              height: "auto",
-              borderRadius: "8px",
-              boxShadow: "0 4px 8px rgba(0, 0, 0, 0.3)"
-            }}
+            className="team-image"
           />
           <img
             src={teamMembers[activeIndex].alternoImage}
             alt={`${teamMembers[activeIndex].title} - Alterno`}
-            style={{
-              maxWidth: "400px",
-              height: "auto",
-              borderRadius: "8px",
-              boxShadow: "0 4px 8px rgba(0, 0, 0, 0.3)"
-            }}
+            className="team-image"
           />
         </div>
       )}

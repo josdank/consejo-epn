@@ -1,0 +1,70 @@
+/* Contact.css */
+
+.contact-container {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    background-color: #085979;
+    color: #ECEBEA;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+  }
+  
+  .card:hover {
+    background-color: #064d67;
+  }
+  
+  .images-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .team-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Media Queries para Responsividad */
+  @media (max-width: 768px) {
+    .cards-container, .images-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .card, .team-image {
+      max-width: 90%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .card {
+      padding: 5px 10px;
+    }
+  
+    .team-image {
+      max-width: 100%;
+    }
+  
+    .images-container {
+      flex-direction: column;
+    }
+  }
+  
